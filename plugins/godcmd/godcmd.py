@@ -333,7 +333,7 @@ class Godcmd(Plugin):
                             ok, result = True, "服务已恢复"
                         elif cmd == "loginSong":
                             self.isrunning = True
-                            ok, result = True, "填上你自己的登录网址"     
+                            ok, result = True, "https://netease-cloud-music-api-alpha-roan-21.vercel.app/qrlogin.html"     
                         elif cmd == "reconf":
                             load_config()
                             ok, result = True, "配置已重载"
