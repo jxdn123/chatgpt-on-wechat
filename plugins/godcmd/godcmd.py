@@ -78,6 +78,10 @@ ADMIN_COMMANDS = {
         "alias": ["reconf", "重载配置"],
         "desc": "重载配置(不包含插件配置)",
     },
+    "loginSong": {
+        "alias": ["loginSong", "登录网易云音乐"],
+        "desc": "点击链接，扫描链接里的二维码，登录网易云音乐",
+    },
     "resetall": {
         "alias": ["resetall", "重置所有会话"],
         "desc": "重置所有会话",
@@ -327,6 +331,9 @@ class Godcmd(Plugin):
                         elif cmd == "resume":
                             self.isrunning = True
                             ok, result = True, "服务已恢复"
+                        elif cmd == "loginSong":
+                            self.isrunning = True
+                            ok, result = True, "填上你自己的登录网址"     
                         elif cmd == "reconf":
                             load_config()
                             ok, result = True, "配置已重载"
